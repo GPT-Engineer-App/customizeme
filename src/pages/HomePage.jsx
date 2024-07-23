@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Spinner } from "react-spinner";
+import { Loader2 } from "lucide-react";
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,10 +19,10 @@ const HomePage = () => {
       <p className="text-xl text-gray-600 mb-8">
         This is a bare-bones application that you can modify and build upon.
       </p>
-      <Button onClick={handleBuyNow} disabled={isLoading} className="relative">
+      <Button onClick={handleBuyNow} disabled={isLoading}>
         {isLoading ? (
           <>
-            <Spinner className="mr-2 h-4 w-4" />
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
             Please wait
           </>
         ) : (
