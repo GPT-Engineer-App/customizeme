@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { ClipLoader } from "react-spinners";
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,7 +22,7 @@ const HomePage = () => {
       <Button onClick={handleBuyNow} disabled={isLoading}>
         {isLoading ? (
           <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <ClipLoader size={16} color="#ffffff" className="mr-2" />
             Please wait
           </>
         ) : (
